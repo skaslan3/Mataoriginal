@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telefoons - Mata Computers</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="custom-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/matalogo.png" alt="Mata Computers Logo">
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="phones.html" class="nav-link active">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Telefoons</span>
+                </a>
+                <a href="reparaties.html" class="nav-link">
+                    <i class="fas fa-tools"></i>
+                    <span>Reparaties</span>
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 data-aos="fade-up">Onze Telefoons</h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="100">Ontdek ons uitgebreide assortiment smartphones</p>
+        </div>
+    </header>
+
+    <!-- Filters -->
+    <section class="filters py-4">
+        <div class="container">
+            <div class="row g-3" data-aos="fade-up">
+                <div class="col-md-3">
+                    <select class="form-select" id="brandFilter">
+                        <option value="all">Alle Merken</option>
+                        <option value="apple">Apple</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="google">Google</option>
+                        <option value="oneplus">OnePlus</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select" id="capacityFilter">
+                        <option value="all">Alle Capaciteit</option>
+                        <option value="128">128GB</option>
+                        <option value="256">256GB</option>
+                        <option value="512">512GB</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select" id="sortFilter">
+                        <option value="popular">Meest Populair</option>
+                        <option value="price-low">Prijs: Laag naar Hoog</option>
+                        <option value="price-high">Prijs: Hoog naar Laag</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-primary w-100" id="filter-button">
+                        <i class="fas fa-filter me-2"></i>Filter Toepassen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phone Grid -->
+    <section class="phones-grid py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- iPhone 15 Pro -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="product-card" data-brand="apple" data-capacity="128" data-price="1199">
+                        <img src="images/iphone15pro.jpg" alt="iPhone 15 Pro">
+                        <div class="product-info">
+                            <h3>iPhone 15 Pro</h3>
+                            <p>Titanium design, A17 Pro chip, 48MP camera</p>
+                            <div class="specs">
+                                <span><i class="fas fa-mobile-alt"></i> 6.1" OLED</span>
+                                <span><i class="fas fa-memory"></i> 128GB</span>
+                            </div>
+                            <div class="price">€1199</div>
+                            <a href="#" class="btn btn-primary mt-3">Meer Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samsung Galaxy S24 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card" data-brand="samsung" data-capacity="256" data-price="899">
+                        <img src="images/s24.jpeg" alt="Samsung Galaxy S24">
+                        <div class="product-info">
+                            <h3>Samsung Galaxy S24</h3>
+                            <p>AI-powered, ProGrade Camera System</p>
+                            <div class="specs">
+                                <span><i class="fas fa-mobile-alt"></i> 6.2" Dynamic AMOLED</span>
+                                <span><i class="fas fa-memory"></i> 256GB</span>
+                            </div>
+                            <div class="price">€899</div>
+                            <a href="#" class="btn btn-primary mt-3">Meer Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Pixel 8 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card" data-brand="google" data-capacity="128" data-price="799">
+                        <img src="images/pixel8.jpg" alt="Google Pixel 8">
+                        <div class="product-info">
+                            <h3>Google Pixel 8</h3>
+                            <p>Pure Android, AI Photography</p>
+                            <div class="specs">
+                                <span><i class="fas fa-mobile-alt"></i> 6.2" OLED</span>
+                                <span><i class="fas fa-memory"></i> 128GB</span>
+                            </div>
+                            <div class="price">€799</div>
+                            <a href="#" class="btn btn-primary mt-3">Meer Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Mata Computers</h5>
+                    <p>Uw telefoon specialist in de regio</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Voorstraat 1<br>
+                        <i class="fas fa-phone"></i> 0123-456789<br>
+                        <i class="fas fa-envelope"></i> info@matacomputers.nl
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Openingstijden</h5>
+                    <p>
+                        Ma-Vr: 09:00 - 18:00<br>
+                        Za: 10:00 - 17:00<br>
+                        Zo: Gesloten
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

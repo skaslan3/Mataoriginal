@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producten - Mata Computers</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigatie -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><h1>Mata Computers</h1></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Thuis</a></li>
+            <li><a href="products.html" class="active">Producten</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Products Header -->
+    <section class="products-header">
+        <h1>Onze Producten</h1>
+        <p>Ontdek ons uitgebreide assortiment</p>
+    </section>
+
+    <!-- Category Selection -->
+    <section class="category-selection">
+        <div class="category-grid">
+            <a href="phones.html" class="category-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Smartphones</h3>
+                <p>iPhone, Samsung, Google Pixel en meer</p>
+            </a>
+            <a href="cases.html" class="category-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Telefoonhoezen</h3>
+                <p>Bescherm je telefoon met stijl</p>
+            </a>
+            <a href="laptops.html" class="category-card">
+                <i class="fas fa-laptop"></i>
+                <h3>Laptops</h3>
+                <p>Professionele laptops voor elk gebruik</p>
+            </a>
+            <a href="accessories.html" class="category-card">
+                <i class="fas fa-plug"></i>
+                <h3>Accessoires</h3>
+                <p>Kabels, opladers en meer</p>
+            </a>
+            <a href="holders.html" class="category-card">
+                <i class="fas fa-car"></i>
+                <h3>Telefoonhouders</h3>
+                <p>Veilig in je auto</p>
+            </a>
+            <a href="powerbanks.html" class="category-card">
+                <i class="fas fa-battery-full"></i>
+                <h3>Powerbanks</h3>
+                <p>Altijd stroom onderweg</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Products Section (Initially Hidden) -->
+    <section class="products-section" style="display: none;">
+        <div class="category-header">
+            <button class="back-to-categories">
+                <i class="fas fa-arrow-left"></i> Terug naar categorieën
+            </button>
+            <h2 class="category-title"></h2>
+        </div>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="brand-filter">Merk:</label>
+                    <select id="brand-filter" class="filter-select">
+                        <option value="all">Alle merken</option>
+                        <option value="iphone">iPhone</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="google">Google</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="capacity-filter">Opslag:</label>
+                    <select id="capacity-filter" class="filter-select">
+                        <option value="all">Alle capaciteiten</option>
+                        <option value="128">128GB</option>
+                        <option value="256">256GB</option>
+                        <option value="512">512GB</option>
+                        <option value="1024">1TB</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort-filter">Sorteren op:</label>
+                    <select id="sort-filter" class="filter-select">
+                        <option value="newest">Nieuwste eerst</option>
+                        <option value="oldest">Oudste eerst</option>
+                        <option value="price-low">Prijs (laag naar hoog)</option>
+                        <option value="price-high">Prijs (hoog naar laag)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="products-grid">
+            <!-- Product cards will be dynamically added here -->
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-phone"></i> 0251-78 58 62</p>
+                <p><i class="fas fa-envelope"></i> info@matacomputers.nl</p>
+                <p><i class="fas fa-map-marker-alt"></i> Breestraat 71, Beverwijk</p>
+            </div>
+            <div class="footer-section">
+                <h3>Openingstijden</h3>
+                <p>Maandag: 12:00 - 17:00</p>  
+                <p>Dinsdag - Zaterdag: 10:00 - 17:00</p>
+                <p>Zondag: Gesloten</p>
+            </div>
+            <div class="footer-section">
+                <h3>Volg Ons</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mata Computers. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
