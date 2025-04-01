@@ -1,4 +1,14 @@
-/* Global Styles */
+/* 1. **Globale Stijlen**
+2. **Reset / Basiselementen**
+3. **Header en Navigatie**
+4. **Sectiespecifieke Stijlen**
+5. **Componenten en Elementen (Knoppen, Tabs, Tabelstijlen, etc.)**
+6. **Responsieve Aanpassingen**
+7. **Animaties** * */
+
+/* =========================================
+   1. Globale Stijlen
+   ========================================= */
 :root {
     --primary-color: #2563eb;
     --secondary-color: #1e40af;
@@ -14,6 +24,259 @@ body {
     line-height: 1.6;
 }
 
+/* =========================================
+   2. Reset / Basiselementen
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================
+   3. Header en Navigatie
+   ========================================= */
+.custom-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    z-index: 1002;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+/* =========================================
+   4. Sectiespecifieke Stijlen
+   ========================================= */
+/* Hero Section */
+.hero-slider {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    margin-top: -80px;
+}
+
+/* Featured Products */
+.featured-products {
+    padding: 4rem 2rem;
+    background: var(--light-bg);
+}
+
+/* Services Section */
+.services-section {
+    padding: 4rem 0;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 0;
+    background: var(--light-bg);
+}
+
+/* =========================================
+   5. Componenten en Elementen
+   ========================================= */
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+/* Cards */
+.product-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+/* Forms */
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+/* Tables */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+/* =========================================
+   6. Responsieve Aanpassingen
+   ========================================= */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .nav-toggle span {
+        display: block;
+        width: 26px;
+        height: 2px;
+        margin: 3px 0;
+        background-color: var(--primary-color);
+        transition: var(--transition);
+        border-radius: 2px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+    }
+
+    .hero-slider {
+        height: 80vh;
+        min-height: 500px;
+    }
+
+    .featured-products {
+        padding: 2rem 1rem;
+    }
+}
+
+/* =========================================
+   7. Animaties
+   ========================================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Hamburger Menu Animaties */
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-menu.active {
+    right: 0;
+}
+
+/* Global Styles */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-color: #1f2937;
+    --light-bg: #f3f4f6;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
 /* Reset en basis stijlen */
 * {
     margin: 0;
@@ -116,6 +379,7 @@ body {
     margin: 5px 0;
     transition: all 0.3s ease;
 }
+
 /* Mobile Navigation Styles */
 @media (max-width: 768px) {
     .custom-navbar {
@@ -246,28 +510,28 @@ body {
 }
 
 
-    /* Ensure other elements don't overlap */
-    .swiper,
-    .swiper-container {
-        z-index: 1;
-    }
+/* Ensure other elements don't overlap */
+.swiper,
+.swiper-container {
+    z-index: 1;
+}
 
-    .swiper-button-next,
-    .swiper-button-prev,
-    .swiper-pagination {
-        z-index: 2;
-    }
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination {
+    z-index: 2;
+}
 
-    /* Adjust hero section to not overlap navbar */
-    .hero-section,
-    .hero-slider {
-        padding-top: 60px;
-        margin-top: 0;
-    }
+/* Adjust hero section to not overlap navbar */
+.hero-section,
+.hero-slider {
+    padding-top: 60px;
+    margin-top: 0;
+}
 
-    .page-header {
-        padding-top: 80px;
-    }
+.page-header {
+    padding-top: 80px;
+}
 
 
 /* Slider */
@@ -332,7 +596,7 @@ body {
 .slide-overlay {
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7));
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
     display: flex;
     align-items: center;
     text-align: left;
@@ -377,7 +641,7 @@ body {
 .swiper-button-next,
 .swiper-button-prev {
     color: var(--white);
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -458,14 +722,14 @@ body {
 .product-card {
     background: var(--white);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: var(--transition);
 }
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .product-card img {
@@ -521,7 +785,7 @@ footer {
     text-align: center;
     margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Producten Pagina */
@@ -622,14 +886,14 @@ footer {
 .product-card {
     background: var(--white);
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: var(--transition);
 }
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .product-card img {
@@ -700,14 +964,14 @@ footer {
     color: var(--white);
     margin-bottom: 1rem;
     font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     font-weight: bold;
 }
 
 .contact-header p {
     color: var(--white);
     font-size: 1.4rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     max-width: 600px;
 }
 
@@ -724,7 +988,7 @@ footer {
     background: var(--white);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form h2 {
@@ -771,7 +1035,7 @@ footer {
     background: var(--white);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -799,7 +1063,7 @@ footer {
 .map-container {
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .map-container iframe {
@@ -813,11 +1077,11 @@ footer {
     .nav-links {
         display: none;
     }
-    
+
     .burger {
         display: block;
     }
-    
+
     .swiper {
         height: 300px;
     }
@@ -877,7 +1141,7 @@ footer {
     background: var(--white);
     width: 100%;
     padding: 2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .toggle .line1 {
@@ -918,7 +1182,7 @@ footer {
     padding: 2rem;
     background: var(--light-bg);
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -962,7 +1226,7 @@ footer {
     border-radius: 10px;
     padding: 2rem;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     text-decoration: none;
@@ -972,7 +1236,7 @@ footer {
 
 .category-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .category-card i {
@@ -1061,7 +1325,7 @@ footer {
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/matagebouw.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/matagebouw.jpeg');
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -1085,7 +1349,7 @@ footer {
 
 .process-step:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .process-step i {
@@ -1118,7 +1382,7 @@ footer {
     background: var(--white);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .table thead th {
@@ -1137,14 +1401,14 @@ footer {
     background: var(--white);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info-wrapper {
     background: var(--white);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info-item {
@@ -1168,7 +1432,7 @@ footer {
 .map-wrapper {
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Form Styles */
@@ -1239,7 +1503,7 @@ footer {
 /* Filters Section */
 .filters {
     background: var(--white);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     top: 80px;
     z-index: 100;
 }
