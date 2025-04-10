@@ -38,11 +38,12 @@ html, body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
-    overflow-x: hidden;
-    touch-action: pan-y;
+    overflow: hidden;
+    touch-action: none;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    pointer-events: none;
 }
 
 img {
@@ -106,29 +107,36 @@ a {
     height: 100vh;
     min-height: 600px;
     margin-top: 0;
-    touch-action: pan-y;
-    -webkit-overflow-scrolling: touch;
     overflow: hidden;
+    touch-action: none;
+    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    pointer-events: none;
 }
 /* Featured Products */
 .featured-products {
     padding: 4rem 2rem;
     background: var(--light-bg);
     margin-top: 2rem;
-    touch-action: pan-y;
-    -webkit-overflow-scrolling: touch;
     overflow: hidden;
+    touch-action: none;
+    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    pointer-events: none;
 }
 /* Services Section */
 .services-section {
-    padding: 6rem 0;
+    padding: 0rem 0;
     background: linear-gradient(135deg, var(--light-bg), var(--white));
     position: relative;
     overflow: hidden;
+    touch-action: none;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    pointer-events: none;
 }
 
 .services-section::before {
@@ -153,10 +161,11 @@ a {
     align-items: center;
     position: relative;
     overflow: hidden;
-    touch-action: pan-y;
+    touch-action: none;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    pointer-events: none;
 }
 
 .service-card::before {
@@ -248,6 +257,12 @@ a {
 .contact-section {
     padding: 4rem 0;
     background: var(--light-bg);
+    overflow: hidden;
+    touch-action: none;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    pointer-events: none;
 }
 /* =========================================5. Componenten en Elementen========================================= */
 /* Buttons */
@@ -295,40 +310,38 @@ a {
     .contact-section,
     .repair-info,
     .products-section {
-        touch-action: pan-y;
-        -webkit-overflow-scrolling: touch;
         overflow: hidden;
+        touch-action: none;
+        -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         -ms-overflow-style: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+        pointer-events: none;
     }
 
     .swiper {
-        touch-action: pan-y;
+        touch-action: none;
         -webkit-overflow-scrolling: touch;
         overflow: hidden;
         scrollbar-width: none;
         -ms-overflow-style: none;
+        pointer-events: none;
     }
 
     .swiper-slide {
-        touch-action: pan-y;
+        touch-action: none;
         -webkit-overflow-scrolling: touch;
         overflow: hidden;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+        pointer-events: none;
     }
 
     .product-card,
     .service-card {
-        touch-action: pan-y;
+        touch-action: none;
         -webkit-overflow-scrolling: touch;
         overflow: hidden;
         scrollbar-width: none;
         -ms-overflow-style: none;
+        pointer-events: none;
     }
 
     /* Aanpassingen voor de slider */
@@ -675,26 +688,25 @@ body {
     width: 100%;
     height: 100%;
     margin-top: 0;
-    touch-action: pan-y;
+    touch-action: none;
     -webkit-overflow-scrolling: touch;
     overflow: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    pointer-events: none;
 }
 
 .swiper-wrapper {
-    touch-action: pan-y;
+    touch-action: none;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    pointer-events: none;
 }
 
 .swiper-slide {
-    touch-action: pan-y;
+    touch-action: none;
     -webkit-overflow-scrolling: touch;
     overflow: hidden;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    pointer-events: none;
 }
 
 .swiper-slide img {
@@ -1250,6 +1262,12 @@ footer {
 .waarom-ons {
     padding: 4rem 2rem;
     background: var(--white);
+    overflow: hidden;
+    touch-action: none;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    pointer-events: none;
 }
 .waarom-ons h2 {
     text-align: center;
@@ -1294,6 +1312,12 @@ footer {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    overflow: hidden;
+    touch-action: none;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    pointer-events: none;
 }
 .category-grid {
     display: grid;
@@ -1400,6 +1424,12 @@ footer {
 /* Repair Page Styles */
 .repair-info {
     background: var(--white);
+    overflow: hidden;
+    touch-action: none;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    pointer-events: none;
 }
 .process-step {
     text-align: center;
@@ -1550,4 +1580,47 @@ footer {
     width: 0;
     height: 0;
     display: none;
+}
+
+/* Herstel pointer events voor interactieve elementen */
+.swiper-button-next,
+.swiper-button-prev,
+.btn,
+.nav-link,
+.service-card,
+.product-card,
+.filter-button,
+.form-control,
+.form-select,
+textarea,
+input {
+    pointer-events: auto;
+}
+
+/* Voorkom scrollen op mobiel */
+@media (max-width: 768px) {
+    body {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .container,
+    .hero-slider,
+    .featured-products,
+    .services-section,
+    .about-section,
+    .contact-section,
+    .repair-info,
+    .products-section,
+    .waarom-ons,
+    .category-selection {
+        overflow: hidden;
+        touch-action: none;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        pointer-events: none;
+    }
 }
