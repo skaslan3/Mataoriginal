@@ -239,16 +239,16 @@ a {
     .services-section {
         padding: 4rem 0;
     }
-    
+
     .service-card {
         padding: 2rem;
         margin-bottom: 2rem;
     }
-    
+
     .service-card i {
         font-size: 2.5rem;
     }
-    
+
     .service-card h3 {
         font-size: 1.3rem;
     }
@@ -628,7 +628,7 @@ body {
         right: 0;
     }
     /* Prevent Swiper Overlap */
-    .swiper,.swiper-container {
+    .swiper, .swiper-container {
         z-index: 1;
     }
     /* Responsive Adjustments */
@@ -658,7 +658,7 @@ body {
         border-radius: 12px;
         transition: all 0.3s ease;
     }
-    .nav-link:hover,.nav-link.active {
+    .nav-link:hover, .nav-link.active {
         background: var(--primary-color);
         color: white;
         transform: translateX(5px);
@@ -669,14 +669,14 @@ body {
     }
 }
 /* Ensure other elements don't overlap */
-.swiper,.swiper-container {
+.swiper, .swiper-container {
     z-index: 1;
 }
-.swiper-button-next,.swiper-button-prev,.swiper-pagination {
+.swiper-button-next, .swiper-button-prev, .swiper-pagination {
     z-index: 2;
 }
 /* Adjust hero section to not overlap navbar */
-.hero-section,.hero-slider {
+.hero-section, .hero-slider {
     padding-top: 60px;
     margin-top: 0;
 }
@@ -787,7 +787,8 @@ body {
     .swiper-button-prev {
         width: 30px;
         height: 30px;
-        display: block !important; /* Zorg ervoor dat de knoppen zichtbaar zijn */
+        display: block !important;
+        /* Zorg ervoor dat de knoppen zichtbaar zijn */
     }
 
     .swiper-button-next:after,
@@ -1138,7 +1139,7 @@ footer {
     color: var(--text-color);
     font-weight: bold;
 }
-.form-group input,.form-group select,.form-group textarea {
+.form-group input, .form-group select, .form-group textarea {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #ddd;
@@ -1146,7 +1147,7 @@ footer {
     font-size: 1rem;
     transition: border-color 0.3s ease;
 }
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus {
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
 }
@@ -1460,7 +1461,7 @@ footer {
     margin: 0 0.5rem;
     transition: var(--transition);
 }
-.nav-tabs .nav-link:hover,.nav-tabs .nav-link.active {
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link.active {
     background: var(--primary-color);
     color: var(--white);
 }
@@ -1605,7 +1606,7 @@ input {
         width: 100%;
         height: 100%;
     }
-    
+
     .container,
     .hero-slider,
     .featured-products,
