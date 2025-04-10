@@ -9,20 +9,35 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-<!-- Navigatie -->
-<nav class="navbar">
-    <div class="logo">
-        <a href="index.html"><h1>Mata Computers</h1></a>
-    </div>
-    <ul class="nav-links">
-        <li><a href="index.html">Thuis</a></li>
-        <li><a class="active" href="products.html">Producten</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
+<!-- Navigation -->
+<nav class="custom-navbar">
+    <div class="nav-container">
+        <a class="nav-logo" href="index.html">
+            <img alt="Mata Computers Logo" src="images/matalogo.png">
+        </a>
+        <div class="nav-menu">
+            <a class="nav-link" href="index.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a class="nav-link" href="products.html">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Producten</span>
+            </a>
+            <a class="nav-link" href="reparaties.html">
+                <i class="fas fa-tools"></i>
+                <span>Reparaties</span>
+            </a>
+            <a class="nav-link active" href="contact.html">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+        <button class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 </nav>
 
